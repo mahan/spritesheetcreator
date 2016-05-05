@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.42 LTS (Windows - x64)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="MH Spritesheet Creator"/>
+  </section>
+  <section name="data">
+    <explorer view="C:\Program Files\PureBasic\Examples\" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2016-05-05 17:56" user="mattiasha" host="MHKGHT450"/>
+  </section>
+  <section name="files">
+    <file name="main.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="0b4cd7e9380d80135c8b4182108b459e"/>
+    </file>
+    <file name="mainform.pbf">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="65c4adeec4abd51acb1bd44bd27c918c"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="Default Target" enabled="1" default="1">
+      <inputfile value="main.pb"/>
+      <outputfile value="mahanspritesheetcreator.exe"/>
+      <options unicode="1" xpskin="1" debug="1"/>
+    </target>
+  </section>
+</project>
