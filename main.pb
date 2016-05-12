@@ -215,6 +215,14 @@ Procedure SaveJSONAtlas(atlasFilename.s)
   CloseFile(0)
 EndProcedure
 
+Procedure SaveIgnitionAtlas(atlasFilename.s)
+  CreateFile(0, atlasFilename, #PB_UTF8)
+  ForEach spriteInfos()
+    WriteStringN(0, GetFilePart(spriteInfos()\filename) + ":" + spriteInfos()\x1 + ":" + spriteInfos()\y1 + ":" + spriteInfos()\w + ":" + spriteInfos()\h)
+  Next
+  CloseFile(0)
+EndProcedure
+
 Procedure OnButtonSaveSpriteSheetPressed(EventType)
   CreateSpriteInfos()
   If Not spritesFitSpriteSheet()
@@ -234,7 +242,11 @@ Procedure OnButtonSaveSpriteSheetPressed(EventType)
   PlaceSpritesOnSheet(spriteSheet)
   ;TODO: ask for output filename ...
   SaveImage(spriteSheet, "myNewSheet.png", #PB_ImagePlugin_PNG)
-  SaveJSONAtlas("myNewSheet.json")
+  If GetGadgetState(optSaveJSONAtlas) = 1 
+    SaveJSONAtlas("myNewSheet.json")
+  Else
+    SaveIgnitionAtlas("myNewSheet.txt")
+  EndIf
 EndProcedure
 
 Procedure initOutputSizes()
@@ -262,10 +274,9 @@ Procedure main()
 EndProcedure
 
 main()
-
-; IDE Options = PureBasic 5.42 LTS (Windows - x64)
-; CursorPosition = 72
-; FirstLine = 69
+; IDE Options = PureBasic 5.42 LTS (Linux - x64)
+; CursorPosition = 85
+; FirstLine = 73
 ; Folding = ----
 ; Markers = 21,197
 ; EnableUnicode

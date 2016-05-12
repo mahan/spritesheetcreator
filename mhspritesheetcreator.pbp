@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.42 LTS (Windows - x64)">
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.42 LTS (Linux - x64)">
   <section name="config">
     <options closefiles="1" openmode="0" name="MH Spritesheet Creator"/>
   </section>
   <section name="data">
-    <explorer view="C:\Program Files\PureBasic\Examples\" pattern="0"/>
+    <explorer view="C:/Program Files/PureBasic/Examples/" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2016-05-05 17:56" user="mattiasha" host="MHKGHT450"/>
+    <lastopen date="2016-05-12 09:10" user="hz" host="hpstream11"/>
   </section>
   <section name="files">
     <file name="main.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="0b4cd7e9380d80135c8b4182108b459e"/>
+      <fingerprint md5="0c3a73d310f62876879fbb13287af2a4"/>
     </file>
     <file name="mainform.pbf">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="65c4adeec4abd51acb1bd44bd27c918c"/>
+      <fingerprint md5="85f6d1b3f6386b77491291ce9962348d"/>
     </file>
   </section>
   <section name="targets">

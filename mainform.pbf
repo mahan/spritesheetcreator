@@ -9,7 +9,7 @@
 
 Global Window_0
 
-Global ButtonOpen, ButtonSaveSpriteSheet, listViewIncomingFiles, Text_0, Text_1, Text_2, ComboOutputWidths, ComboOutputHeights
+Global ButtonOpen, ButtonSaveSpriteSheet, listViewIncomingFiles, Text_0, Text_1, Text_2, ComboOutputWidths, ComboOutputHeights, optSaveJSONAtlas, optSaveIgnitionAtlas
 
 Declare ResizeGadgetsWindow_0()
 
@@ -19,20 +19,23 @@ Declare OnButtonSaveSpriteSheetPressed(EventType)
 Procedure OpenWindow_0(x = #PB_Ignore, y = #PB_Ignore, width = 600, height = 400)
   Window_0 = OpenWindow(#PB_Any, x, y, width, height, "Mahan Spritesheet Creator", #PB_Window_SystemMenu | #PB_Window_SizeGadget)
   ButtonOpen = ButtonGadget(#PB_Any, 20, 20, 150, 30, "Open image(s)")
-  ButtonSaveSpriteSheet = ButtonGadget(#PB_Any, 20, 60, 150, 30, "Save Spritesheet and Atlas")
-  listViewIncomingFiles = ListViewGadget(#PB_Any, 180, 20, 400, 360)
+  ButtonSaveSpriteSheet = ButtonGadget(#PB_Any, 350, 360, 230, 30, "Save Spritesheet and Atlas")
+  listViewIncomingFiles = ListViewGadget(#PB_Any, 190, 20, 390, 330)
   Text_0 = TextGadget(#PB_Any, 20, 100, 150, 20, "Output dimensions:")
-  Text_1 = TextGadget(#PB_Any, 30, 120, 40, 20, "Width:")
-  Text_2 = TextGadget(#PB_Any, 30, 150, 50, 20, "Height:")
-  ComboOutputWidths = ComboBoxGadget(#PB_Any, 80, 120, 90, 25)
-  ComboOutputHeights = ComboBoxGadget(#PB_Any, 80, 150, 90, 25)
+  Text_1 = TextGadget(#PB_Any, 20, 130, 50, 20, "Width:")
+  Text_2 = TextGadget(#PB_Any, 20, 160, 50, 20, "Height:")
+  ComboOutputWidths = ComboBoxGadget(#PB_Any, 80, 130, 90, 25)
+  ComboOutputHeights = ComboBoxGadget(#PB_Any, 80, 160, 90, 25)
+  optSaveJSONAtlas = OptionGadget(#PB_Any, 20, 190, 150, 25, "JSON Atlas")
+  optSaveIgnitionAtlas = OptionGadget(#PB_Any, 20, 210, 150, 25, "Ignition Atlas")
 EndProcedure
 
 Procedure ResizeGadgetsWindow_0()
   Protected FormWindowWidth, FormWindowHeight
   FormWindowWidth = WindowWidth(Window_0)
   FormWindowHeight = WindowHeight(Window_0)
-  ResizeGadget(listViewIncomingFiles, 180, 20, FormWindowWidth - 200, FormWindowHeight - 40)
+  ResizeGadget(ButtonSaveSpriteSheet, FormWindowWidth - 250, FormWindowHeight - 40, 230, 30)
+  ResizeGadget(listViewIncomingFiles, 190, 20, FormWindowWidth - 210, FormWindowHeight - 70)
 EndProcedure
 
 Procedure Window_0_Events(event)
