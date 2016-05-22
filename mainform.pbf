@@ -27,6 +27,7 @@ Procedure OpenWindow_0(x = #PB_Ignore, y = #PB_Ignore, width = 600, height = 400
   ComboOutputWidths = ComboBoxGadget(#PB_Any, 80, 130, 90, 25)
   ComboOutputHeights = ComboBoxGadget(#PB_Any, 80, 160, 90, 25)
   optSaveJSONAtlas = OptionGadget(#PB_Any, 20, 190, 150, 25, "JSON Atlas")
+  SetGadgetState(optSaveJSONAtlas, 1)
   optSaveIgnitionAtlas = OptionGadget(#PB_Any, 20, 210, 150, 25, "Ignition Atlas")
 EndProcedure
 
